@@ -1,0 +1,81 @@
+/*css units:
+we have used pixels (px) so no need, next is %, it is usually relative to some other value.
+for example if width is set to be 50%, then that would be 50% of the parent element. so there are situations 
+where it is a % of itself. eg of the first scenario: */
+
+
+section{
+    background-color: orange;
+    width: 300px;
+    height: 300px;
+}
+
+.unit {
+    background-color: red;
+    width: 50%;
+    height: 30%;
+}
+
+
+/* for the second scenario where it is relative to itself, it could occur in a situation where the font-size 
+has already been set then modified using the line-height to a value relative to the font-size previously set. eg:*/
+
+
+h2{ font-size: 30px;
+    border: 1px solid black;
+    line-height: 20%; 
+    background-color: blue;
+}
+
+/* after testing i found that the size of the font doesnt actully change, what seemed to have changed was
+the height of the inline content area not the text itself.
+ 
+
+next is the EM unit, quite interesting i gotta say. in this, looking at font-size, 1em will equal the font-size of parent
+and 2, 3 ems will be multiples of the parent font-size. 
+
+while for other properties which arent font-size, 1em will equal the font-size selected.
+what this means is that using em units, the font-size of the element will be relative to its parent's while
+its other properties will be relative to its font-size. eg */
+
+
+div {
+    font-size: 20px;
+}
+
+button{
+    color: white;
+    font-size: 1em;
+    background-color: #2a9d8f;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    margin: 0.3em;
+    padding: 0 10px;
+}
+
+/* as can see on display, the values given to the attributes of the buttons changes to meet the environment they find themseleves
+this way one doesnt need to keep changing each value to get the right display one is looking for, unlike if one were to use an absolute unit like px.
+
+
+next is rems... this could mean root ems... Ems value are dependent on their parent's value, this means that in the case where there may be a nest within
+a nest with a nest like in the case of lists, there will be a progressive increase in the font-size and others the more the nests go on. eg */
+
+
+#ems {
+    font-size: 10px;
+}
+#ems ul{
+    font-size: 2em;
+}
+
+
+/* now rems solve this problem, this is because rems are relative to the value of the root html. ie <html> usually written at the begining of html files.
+this way it makes sure that everything has same reference point and thus chaaos wont hopefully not occur like with ems. eg below:*/
+
+#rems{
+    font-size: 2rem;
+}
+
+#rems ul{
+font-size: 1rem;
+}

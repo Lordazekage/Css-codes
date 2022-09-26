@@ -1,0 +1,57 @@
+
+
+h1 {
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h2 {
+    color: indigo;
+    text-align: right;
+}
+
+h3 {
+    color: rgb(0,0,255);
+    font-weight: normal;
+} 
+
+p {
+    color: #3de709;
+    font-weight: 700;
+}
+
+
+/*width: controls how much of inline or page the line takes or covers.
+
+ font-weight controls the lightness or boldness of the text, you can use texts like normal, bold 
+ or numbers like 400, 700 to determine if its normal or bolded.
+
+ text-decoration is used to add decorative lines in text like underline or overline or even line-through, 
+ also you can specify the colour of the line, also control what type of line like solid, double, dotted, wavy etc.
+ you include space btw each functions eg red wavy underline.
+ it can also be used to remove default text-decoration like the underline added to <a>/ links texts.
+
+line-height: controls the height of a line of text. it has diffent units.
+
+letter-spacing: modifies the spaces between letters in texts. units is px.
+
+font-size: changes the size of texts. has different values or units like named ones like small, large or larger, 
+units using px or em,rem, vh, % etc. most common used is px.
+
+font-family: used to change the font of a text. note not all operating systems may have al the fonts yu want to use
+so you can specify several fonts separated by a comma so that if it doesnt have the first it may use the second or third etc.
+you can also just specify a particular family of fonts eg serif, san-serif, fantasy etc
+
+
+
+
+
+
+
+
+
+ 

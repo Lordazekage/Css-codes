@@ -1,0 +1,151 @@
+
+/* {
+    background-color: pink;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+#signup{
+    color: #f1faee ;
+    background-color: #1d3557;
+}
+
+h1,h2 {
+    color: #1d3557;
+}
+
+span {
+    color: #457b9d;
+}
+
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+.post a {
+    color: #457b22;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a {
+    color: #e63946;
+}
+
+
+h2 + button {
+    font-size: 20px;
+    background-color: magenta;
+}
+
+footer > a {
+    color: #a8daff;
+}
+
+input[type="password"] {
+    color: red;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+
+.post button:hover{
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+button:active {
+    background-color: #45559d;
+    color: #fa0202;
+}
+
+a:hover{
+    text-decoration: overline;
+}
+
+
+section:nth-last-of-type(2n) {
+    background-color: #dfe8dc;
+}
+
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line{
+    color: purple;
+}
+
+p::selection{
+    background-color: #fcbf49; /* this has to do with the color when highlighted */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* universal selector selects everything. its done by using * as the selector.
+there is element selector where you just select everything under an element like p, a, h1 etc.
+
+you can format multiple selectors by separating with a comma. eg h1,h2.
+
+ID selector: this provides a hook in html for CSS to be able to modify one thing from several similar things.
+you put the Id in the html and reference it in the css using #name_of_ID.
+note that every ID but be unique.
+Note dont use them excessivly. There are other things u can also use like class.
+
+CLASS: similar to ID in that it is added to the html to aid hook the CSS. Merit is that it
+can be applied to multiple different types of elements. in the css the class would be writen 
+as .class_name.
+
+decendant selector: this is done by making a space btw two selectors. it is used to select an attribute that is nested inside somewhere either direct or a nest with a next.
+ it is writen by writting the parent then space then the decendant attribute we want to format via Css.
+
+Adjacent combinator: this uses a +, it selects all the elements types indicated after the + that are comes after all the element
+types that come before the +.
+
+direct child combinator: uses >, selects the element stated after the > that is a direct descendant of the elements before the >.
+it wont select something with a similar name which is a grandchild or so.
+
+attribute selector: using [] you can select an attribute of an element and format it.
+note check the mdn for attribute selector for much more info on this.
+
+read psuedo-class on mdn. they come as :active, :hover, :nth-of-type(), etc.
+note nth-of-type(number eg 3) is selecting that position ie the 3rd among a multiple of number, while  
+nth-of-type(number eg 3n) selects every 3rd among the list of numbers.
+
+Psuedo-elements uses ::  and they are not much, they are modifiers that modifies particular parts of the selected elements. eg
+::first-letter, ::first-line etc.
+
+
+ note CSS is a cascade language, this means that it is styled in chains. what this means is that if one thing is styled two the different ways,
+ the one which comes after will be used, like an overwrite.
+
+ specificity: this is how the code picks which css format to use when there are clashes.
+ basically ID is most specific, then class, attributes and psuedo-class then elements and pseudo-elements.
+ scoring system is ID has score of 100 per ID. 
+ Class, attributes and pseudo-class 10 per each.
+ Elements and pseudo-elements have 1 per each.
+this will only apply on the specific format in dispute.
+oh the most specific is inline styles but no one uses them.
+
+
+you can use google dev tools to look at the page, edit it and see the order and specificity and possibly look thru why 
+some of your codes may not be applying or are applying over another.

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learning tables</title>
+</head>
+
+<body>
+
+    <h1>TABLES IN HTML</h1>
+    <!--td refers to each cell in a table and are one the same line if not specified.
+tr refers to table rows, it is used to put the cells in specific rows.
+th refers to table header cells and are also put into a row
+thead, tbody and tfoot are usually just used to give designation to those parts of the table.
+they may not see use until CSS or in complicated tables, so just use as per normal practice.-->
+
+    <h2>heavy birds</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Animals</th>
+                <th>Average mass [Kg(lb)]</th>
+                <th>Maximum mass [Kg(lb)]</th>
+                <th>Flighted</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>ostrich</td>
+                <td>156.8(346)</td>
+                <td>104(230)</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>90(200)</td>
+                <td>N0</td>
+            </tr>
+
+            <tr>
+                <td>Wild Turkey</td>
+                <td>13.5(29.8)</td>
+                <td>39(86)</td>
+                <td>Yes</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <!-- this particular table doest have a footer so tfooter wasnt used. -->
+
+
+    <h2>V2</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th rowspan="2">Animals</th>
+                <th colspan="2">Average mass</th>
+                <th rowspan="2">Flighted</th>
+            </tr>
+
+            <tr>
+                <th>Kg</th>
+                <th>lb</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>ostrich</td>
+                <td>156.8</td>
+                <td>346</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>90</td>
+                <td>200</td>
+                <td>N0</td>
+            </tr>
+
+            <tr>
+                <td>Wild Turkey</td>
+                <td>13.5(29.8)</td>
+                <td>29.8</td>
+                <td>Yes</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <a href="first.html">home page</a>
+    <a href="emmets.html">emmets</a>
+    <a href="forms.html">forms</a>
+
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forms demo</title>
+    <link rel="stylesheet" href="intro to css.css">
+</head>
+
+<body>
+
+    <h1>FORM AND LABEL</h1>
+
+
+    <!-- LABEL: this is used to associate a peice of text with a clickable box.
+    two ways to do it, you use the "id" and "for" attributes, or you can nest the input inside the label.
+    the former is better because it makes editting with CSS more flexible.
+    example of labels is done on the above form
+    -->
+
+    <!--to submit a form after filling it two ways exists, you can use the normal <button></button>,
+    or you can use <input type="submit">. the former is better, cuz its easier to write what you want,
+    if youwant to via the latter you need to add an extra attribute inside the input ie value= "what ever you want to name it.
+    also if you use <button> within the form it automatically try to submit the form, except you mordify the button to act just like a button
+    type="button" within it. this is how a button would normally act outside a form. -->
+
+    <!--now an important thing to note is that every input should have an identifier known as name, this is what the server will read to see what you have
+    inputted via each input, so its best to give a value to the name attribute something that relates to that particular input.-->
+
+    <!-- basically the ACTION attribute is like the location to which the input of a form is taken to. 
+    As for the NAME, lets just say that the location where the input is going to only listens to people with a specific 
+    name that is why you gotta name it that thing so that the server can be like my g (mr whatever) has something to say, let me hear him out. 
+    the VALUE in radio is like the unique identifier of the option selected to the server since the options all have same name.
+    CHECKED is used to preselect from the onset, it can still be changed by the user. it is used in situation like when you already filled
+    a form and submitted then you came back to the form so that you can see what you previously selected.
+    -->
+
+    <!-- SELECT is used to give you a list of options to choose from. it has two attributes, a SELECT and an OPTION.
+    the SELECT contains the NAME and ID while the OPTION contains the VALUE that is sent to the server when clicked. SELECTED is used to preselect.
+    -->
+
+    <!-- the RANGE and NUMBER are basically the same other than the type, anyways they could have several attributes like MIN= lowest it can go,
+    MAX= highest it can go, STEP= by how many it will move at once, VALUE= the default place it will start when openned, can be moved from this afterwards.
+    -->
+    <button>click me</button>
+
+
+    <form action="/tarcos/">
+
+        <p>
+            <label for="username">Enter username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+
+        <p>
+            <label for="password">Enter password:</label>
+            <input type="password" placeholder="enter password" id="password" name="password">
+        </p>
+
+        <button type="button">Do not submit</button>
+
+        <p>
+            <label for="color">Enter color:</label>
+            <input type="color" id="color" name="color">
+        </p>
+
+        <p>
+            <label>
+                Enter number:
+                <input type="number" placeholder="enter number" name="number">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Enter date:
+                <input type="date" placeholder="choose a date" name="date">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Enter time:
+                <input type="time" placeholder="time is?" name="time">
+            </label>
+        </p>
+
+        <button>suBmit buTTon</button>
+
+        <input type="submit">
+
+        <input type="submit" value="click TO submit">
+
+    </form>
+
+
+
+    <p>
+
+        <a href="first.html">home page</a>
+        <a href="emmets.html">emmets</a>
+        <a href="tables.html">tables</a>
+
+    </p>
+
+
+    <p>
+
+        <form action="http://www.google.com/search">
+            <input type="text" name="q" placeholder="search google">
+            <button>click to search google</button>
+        </form>
+
+        <form action="http://www.reddit.com/search/">
+            <input type="text" name="q">
+            <button>click to search reddit</button>
+        </form>
+
+    </p>
+
+    <h2>More on Inputs</h2>
+
+    <form action="/slice">
+
+        <label for="checkbox">boys are awesome</label>
+        <input type="checkbox" name="checkbox" id="checkbox" checked>
+
+
+        <h4>PICK YOUR POISION</h4>
+
+        <p>
+
+            <label for="ra">small ass</label>
+            <input type="radio" name="radio" id="ra" value="s ass">
+
+            <label for="rad">big ass</label>
+            <input type="radio" name="radio" id="rad" value="b ass">
+
+            <label for="radi">small boobs</label>
+            <input type="radio" name="radio" id="radi" value="s boobs">
+
+            <label for="radio">big boobs</label>
+            <input type="radio" name="radio" id="radio" value="b boobs" checked>
+
+        </p>
+
+    </form>
+
+    <h3>SELECT ELEMENT</h3>
+
+    <p>
+
+        <label for="meal">Please Select an Entree</label>
+
+        <select name="meal" id="meal">
+
+            <option value="fish">Fish</option>
+            <option value="" selected>Click to Select</option>
+            <option value="veg">Vegetarian</option>
+            <option value="steak">Steak</option>
+
+        </select>
+
+    </p>
+
+    <h3>RANGE AND TEXT AREA</h3>
+
+    <p>
+
+        <form action="/test">
+
+            <label for="range">Number of Cheese</label>
+            <input type="range" name="range" id="range" value="2" min="0" max="20" step="2">
+
+            <label for="number">Input a Number</label>
+            <input type="number" name="number" id="number" value="500" min="0" max="1000" step="10">
+
+
+        </form>
+
+    </p>
+
+    <p>
+
+        <label for="area">Type in Box</label>
+
+        <textarea name="area" id="area" cols="20" rows="3" placeholder="type here">
+      
+        </textarea>
+
+    </p>
+
+    <h3>VALIDATIONS</h3>
+
+    <!-- this is used to add constiant or make sure a certain conditions are met before accepting the input,i
+        eg @ for email, http:// for url etc. some are shown below.
+     MIN and MAX is for NUMERICAL ELEMENTS while MINLENGHT AND MAXLENGHT is for letters like text-->
+
+    <form action="/dummy">
+
+        <label for="first">ENTER first NAME</label>
+        <input type="text" name="first" id="first" required>
+
+        <p>
+            <label for="username"> USERNAME</label>
+            <input type="text" name="username" id="username" minlength="5" maxlength="20" required>
+
+        </p>
+
+        <button>Submit</button>
+
+    </form>
+
+
+    <h4>Race Registration!</h4>
+
+    <form action="/test">
+
+        <p>
+
+            <label for="first_n">First Name</label>
+            <input type="text" name="first" id="first_n" required>
+
+            <label for="last">Last Name</label>
+            <input type="text" name="last" id="last" required>
+
+        </p>
+
+        <p> Select a Race: </p>
+
+        <div>
+            <input type="radio" name="race" id="fivek" value="fivek">
+            <label for="fivek">Fun Run 5k</label>
+        </div>
+
+        <div>
+            <input type="radio" name="race" id="half" value="half">
+            <label for="half">Half Marathon</label>
+        </div>
+
+
+        <div>
+            <input type="radio" name="race" id="full" value="full">
+            <label for="full">Full Marathon</label>
+        </div>
+
+        <div>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+
+        </div>
+
+        <div>
+
+            <label for="age">Select Age Group</label>
+
+            <select name="age" id="age">
+
+                <option value="kids">under 18</option>
+                <option value="ya">18-30</option>
+                <option value="adults">30-50</option>
+                <option value="seniors">50+</option>
+
+            </select>
+
+        </div>
+
+        <button>Register!</button>
+
+
+    </form>
+
+</body>
+
+</html>
